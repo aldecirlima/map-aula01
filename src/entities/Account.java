@@ -24,7 +24,7 @@ public class Account {
 
 	}
 
-	private void validateWithdrow(Double amount) {
+	private void validateWithdraw(Double amount) {
 		if (amount > this.getWithdrawLimit()) {
 			throw new BusinessException("Erro de saque: a quantia excede o limite de saque");
 		}
@@ -34,7 +34,7 @@ public class Account {
 	}
 
 	public void withdraw(Double amount) {
-		validateWithdrow(amount);
+		validateWithdraw(amount);
 		this.balance -= amount;
 	}
 

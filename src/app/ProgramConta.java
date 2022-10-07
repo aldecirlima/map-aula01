@@ -33,6 +33,7 @@ public class ProgramConta {
 
 		try {
 			acc.withdraw(amount);
+			System.out.println("Saque efetuado com sucesso!");
 			System.out.printf("Novo saldo: %.2f%n", acc.getBalance());
 		} catch (BusinessException e) {
 			System.out.println(e.getMessage());
